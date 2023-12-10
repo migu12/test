@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	{% load static %}
+	<link type="text/css" rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+
+<body>
+  
+	<div class="loginBox custom-card">
+		<h2>register</h2>
+		<form action="" method="post">
+            {% csrf_token %}
+			<div class="item">
+				<input type="text" required name="username">
+				<label for="">userName</label>
+			</div>
+			<div class="item">
+				<input type="password" required name="password">
+				<label for="">password</label>
+			</div>
+            <div class="item">
+				<input type="repassword" required name="repassword">
+				<label for="">repassword</label>
+			</div>
+            <div class="item">
+				<input type="phone" required name="phone">
+				<label for="">phone</label>
+			</div>
+			<button class="btn">submit
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</form>
+	</div>
+</body>
+
+</html>

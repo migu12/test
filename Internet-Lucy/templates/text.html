@@ -1,0 +1,23 @@
+<!-- 使用animate.css -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <h1 class="animate__animated animate__bounce">An animated element</h1>
+
+<!-- 字体暂时调不出来,能用 -->
+<!-- 霓虹字体1 -->
+{%load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/text_neon.css' %}" />
+<div class="neon">CYBER</div>
+<div class="flux">PUNK</div>
+<!-- /霓虹字体1 -->
+
+
+<!-- 发光阴影字体 (text_neon_glowing.css) -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/text_neon_glowing.css' %}" />
+<div class="neonFont">
+    <div class="grenn animate__animated animate__fadeIn animate__repeat-1">Motley Crue</div>
+    <div class="pink">Scorpions</div>
+</div>
+<!-- /发光阴影字体 -->

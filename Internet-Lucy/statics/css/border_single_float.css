@@ -1,0 +1,73 @@
+
+  .flow-border {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    font: bold 36px/100px Arial;
+    text-align: center;
+  }
+  
+  .flow-border > [class^="b-"]{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100px;
+    background-image: linear-gradient(transparent, #58e);
+    background-size: 4px 800px;
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    animation: 5s linear 0s backwards infinite none;
+  }
+  .flow-border > .b-left {
+    animation-name: b-left;
+  }
+  .flow-border > .b-bottom {
+    height: 300px;
+    background-position: 0px 700px;
+    transform: translate(148px, -52px) rotate(-90deg);
+    animation-name: b-bottom;
+  }
+  .flow-border > .b-right {
+    background-position: 0px 400px;
+    transform: translate(300px, 0) rotate(180deg);
+    animation-name: b-right;
+  }
+  .flow-border > .b-top {
+    height: 300px;
+    background-position: 0px 300px;
+    transform: translate(152px, -148px) rotate(90deg);
+    animation-name: b-top;
+  }
+  
+  .flow-border .b-left {
+    background-position: 0px 800px;
+  }
+  .flow-border .b-bottom {
+    background-position: 0px 1500px;
+  }
+  .flow-border .b-right {
+    background-position: 0px 1200px;
+  }
+  .flow-border .b-top {
+    background-position: 0px 1100px;
+  }
+  
+  @keyframes b-left {
+    from {background-position: 0px 0px;}
+    to {background-position: 0px 800px;}
+  }
+  @keyframes b-bottom {
+    from {background-position: 0px 700px;}
+    to {background-position: 0px 1500px;}
+  }
+  @keyframes b-right {
+    from {background-position: 0px 400px;}
+    to {background-position: 0px 1200px;}
+  }
+  @keyframes b-top {
+    from {background-position: 0px 300px;}
+    to {background-position: 0px 1100px;}
+  }
+  

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* overflow: hidden; */
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+    min-height: 100vh;
+    background-color:#000;
+}
+.box_liushuideng{
+    overflow: hidden;
+    padding: 15vmin 10vmin;
+    border-radius: 5vmin;
+    color:#66ddf7;
+    font-size: 8vmin;
+    position: relative;
+    z-index: 0;
+}
+.box_liushuideng::before{
+    content: "";
+    width: 200%;
+    height:200%;
+    background-color: #000;
+    background-image:conic-gradient(transparent,#66ddf7,transparent 30%);
+    position: absolute;
+    left:-50%;
+    top:-50%;
+    z-index:-2;
+
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.box_liushuideng::after{
+    content: "";
+    inset:1vmin;
+    background-color: #000;
+    border-radius: 4vmin;
+    position: absolute;
+    z-index: -1;
+}

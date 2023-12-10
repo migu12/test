@@ -1,0 +1,94 @@
+<title>首页</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+<div class="container">
+  <header>
+    <img src="{% static 'images/logo.svg' %}"/>
+
+    <nav>
+        <ul>
+          <li>
+            <a href="">首页</a>
+          </li>
+          <li>
+            <a href="">商城</a>
+          </li>
+
+          <li id="person">
+            <a href="">个人中心</a>
+          </li>
+          <li>
+            <a href="../login/">登录</a>
+          </li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="mainLeft">
+      <!-- <h1 class="headline">对未来世界信息的展望</h1> -->
+      <!-- 霓虹字体1 -->
+      <!-- {%load static %} -->
+      <!-- <link type="text/css" rel="stylesheet" href="{% static 'css/text_neon.css' %}" /> -->
+      <h1 class="flux">
+        <span class="left-part">宇宙万象</span>
+        <span class="right-part">尽在掌握</span>
+      </h1>
+      <style>
+        .flux {
+            font-size: 80px;
+            text-shadow: 0 0 3vw #05219e;
+            animation: flux 2s linear infinite;
+        }
+        @keyframes flux {
+            0%, 100% {
+                text-shadow: 0 0 1vw #00BFFF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+                color: #00BFFF;
+            }
+            50% {
+                text-shadow: 0 0 1vw #004080, 0 0 3vw #001933, 0 0 10vw #001933, 0 0 10vw #001933, 0 0 .4vw #005266, .5vw .5vw .1vw #00334D;
+                color: #00BFFF; /* 更接近初始颜色的调整 */
+            }
+        }
+
+        .flux {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .left-part {
+            align-self: flex-start;
+        }
+
+        .right-part {
+            align-self: flex-end;
+        }
+
+
+
+
+      </style>
+      <!-- /霓虹字体1 -->
+
+      <p class="description">
+        欢迎来到Drotech无人机租赁平台！在这里，我们不仅提供无人机定制租赁服务，更是一扇通往无限可能的大门。通过我们强大而多样的无人机机型，您可以轻松驾驭宇宙的万象，将飞行的魅力尽情揽入手中。
+      </p>
+      <!-- <button class="btn">注册</button> -->
+    </div>
+    <div class="mainRight">
+        <img src="{% static 'images/bg.svg'%}" alt="" />
+    </div>
+  </main>
+
+</div>
+

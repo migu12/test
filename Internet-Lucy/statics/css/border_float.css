@@ -1,0 +1,41 @@
+.boxes {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .boxes p {
+    color: #fff;
+    font-size: 24px;
+    z-index: 1;
+  }
+  .boxes::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 140%;
+    background: linear-gradient(rgb(24, 98, 235), rgb(229, 66, 6));
+  }
+  .boxes::after {
+    content: "";
+    position: absolute;
+    background: #0e1532;
+    inset: 4px; /* inset 是 top、bottom、left、right 都为5px的简写*/
+    border-radius: 16px;
+  }
+  .boxes::before {
+    animation: rotate 4s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

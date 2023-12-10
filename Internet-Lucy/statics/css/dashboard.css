@@ -1,0 +1,49 @@
+.box::after {
+    content: '';
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom, #ff0059, #1e00ff, #00ff2f, #fff);
+    animation: rotate linear 8s infinite;
+    position: absolute;
+    z-index: -11;
+    transform: rotate(0deg);
+    margin-left: -15px;
+    left: -50%;
+    top: -50%;
+  }
+ 
+  .box {
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+  }
+ 
+  .div {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    z-index: 999999;
+  }
+ 
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+ 
+    }
+ 
+    50% {
+      transform: rotate(180deg);
+ 
+    }
+ 
+    100% {
+      transform: rotate(359deg);
+ 
+    }
+  }

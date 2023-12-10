@@ -1,0 +1,249 @@
+
+
+
+<!-- boder_float -->
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_float.css'%}" />
+<div>
+  <div class="boxes">
+    <p>css</p>
+  </div>
+</div>
+
+
+<!-- <style scoped>
+
+</style> -->
+<!-- /border_float -->
+
+
+
+<!-- border_gradient （边框会显示到整个网页的边框上，暂时调不出来） -->
+<!-- {% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_gradient.css' %}"/>
+<div class="box">
+  <h1>Border Animation</h1>
+  <span class="border-top"></span>
+  <span class="border-right"></span>
+  <span class="border-bottom"></span>
+  <span class="border-left"></span>
+</div> -->
+<!-- /border_gradient -->
+
+
+<!-- border_liushuideng -->
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_liushuideng.css' %}"/> 
+<div class ="box_liushuideng">流水灯边框</div>
+<!-- /border_liushuideng -->
+
+
+
+
+<!-- border_card -->
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_card.css' %}" />
+<div class="container">
+  <div class="box">
+      <span></span>
+      <div class="content">
+          <h2>Card One</h2>
+          <p>dwbayulfghailfgliaugsfeiluawgflaj</p>
+          <a href="#">Read More</a>
+      </div>
+  </div>
+  <div class="box">
+      <span></span>
+      <div class="content">
+          <h2>Card Two</h2>
+          <p>dwbayulfghailfgliaugsfeiluawgflaj</p>
+          <a href="#">Read More</a>
+      </div>
+  </div>
+  <div class="box">
+      <span></span>
+      <div class="content">
+          <h2>Card Three</h2>
+          <p>dwbayulfghailfgliaugsfeiluawgflaj</p>
+          <a href="#">Read More</a>
+      </div>
+  </div>
+</div>
+
+
+<!-- cyberpunk 赛博朋克多边形 -->
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/cyberpunk.css' %}" />
+<div style="display: block;">
+<p class="cyberpunk" >经典的赛博朋克角色是边缘且性格疏远的独行者。他们生活在社会群体的边缘，一个弥漫反乌托邦氛围的未来：日常生活受到急剧改变的科技影响，普及的计算机化信息笼罩全球，以及侵入性的人体改造。</p>
+<p class="cyberpunk inverse">经典的赛博朋克角色是边缘且性格疏远的独行者。他们生活在社会群体的边缘，一个弥漫反乌托邦氛围的未来：日常生活受到急剧改变的科技影响，普及的计算机化信息笼罩全球，以及侵入性的人体改造。</p>
+<p class="cyberpunk inverse dotted">经典的赛博朋克角色是边缘且性格疏远的独行者。他们生活在社会群体的边缘，一个弥漫反乌托邦氛围的未来：日常生活受到急剧改变的科技影响，普及的计算机化信息笼罩全球，以及侵入性的人体改造。</p>
+</div>
+<!-- /cyberpunk 赛博朋克多边形 -->
+
+<!-- 彩色流动边框 -->
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .rainbow {
+      position: relative;
+      z-index: 0;
+      width: 400px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 2rem;
+    }
+ 
+    .rainbow::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-color: #399953;
+      background-repeat: no-repeat;
+      background-size: 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+      -webkit-animation: rotate 4s linear infinite;
+      animation: rotate 4s linear infinite;
+    }
+ 
+    .rainbow::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 6px;
+      top: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      background: black;
+      border-radius: 5px;
+    }
+ 
+    @keyframes rotate {
+      100% {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="rainbow"></div>
+</body>
+ 
+</html>
+<!-- /彩色流动边框 -->
+
+<!-- 科技感流动边框 -->
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-line1:before,
+        .box-line1:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: "";
+            z-index: 99;
+            margin: -7%;
+            animation: surround linear infinite 8s;
+            box-shadow: inset 0 0 0 4px #00a1ff;
+        }
+ 
+        .box-line1:before {
+            animation-delay: -4s;
+        }
+ 
+        .box-line1 {
+            border: 3px solid #00a1ff;
+            position: absolute;
+            left: 500px;
+            top: 200px;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+ 
+        @keyframes surround {
+            0%, 100% {
+                clip: rect(0px, 230px, 2px, 0px); /* 调整 clip 的数值，增加宽度 */
+            }
+
+            25% {
+                clip: rect(0px, 2px, 230px, 0px);
+            }
+
+            50% {
+                clip: rect(228px, 230px, 230px, 0px);
+            }
+
+            75% {
+                clip: rect(0px, 230px, 230px, 228px);
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="box-line1"></div>
+</body>
+ 
+</html>
+<!-- /科技感流动边框 -->
+
+<!-- 单边流动边框 border_single_float.css -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_single_float.css'%}" />
+
+
+  <div class="flow-border">
+    <div class="b-left"></div>
+    <div class="b-bottom"></div>
+    <div class="b-right"></div>
+    <div class="b-top"></div>
+    <span>
+      按钮
+    </span>
+  </div>
+
+<!-- /单边流动边框 -->
+
+<!-- border_custom_card.css -->
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/border_custom_card.css' %}">
+<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+  <div>
+      <div class="border_item custom-card">
+          <h3 class="uk-text-background">Default</h3>
+          <p class="uk-text-background">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+  </div>
+  <div>
+      <div class="border_item custom-card"></div>
+  </div>
+  <div>
+      <div class="border_item custom-card"></div>
+  </div>
+  
+</div>
+<!-- /border_custom_card -->

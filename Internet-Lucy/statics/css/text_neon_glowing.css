@@ -1,0 +1,73 @@
+/* scss */
+/* scss */
+.grenn{
+    font-family: 'AndilanteriaSignature';  /*使用字体*/
+    font-size: 80px;
+    color: #91bb8d;
+    text-shadow: 0px 0px 1px #fff,0px 0px 8px #91bb8d,0px 0px 16px #91bb8d,0px 0px 32px #91bb8d,0px 0px 64px #91bb8d,0px 0px 128px #91bb8d;
+    filter: brightness(1.5);
+    /* text-shadow: 0px 0px 2px #fff,0px 0px 16px #91bb8d,0px 0px 30px #91bb8d,0px 0px 70px #91bb8d,0px 0px 150px #91bb8d,0px 0px 310px #91bb8d;
+    filter: brightness(1.8); */
+}
+
+.pink{
+    font-family: 'AndilanteriaSignature';
+    font-size: 80px;
+    color: #b0355a;
+    margin-top: 20px;
+    text-shadow: 0px 0px 1px #fff,0px 0px 8px #b0355a,0px 0px 16px #b0355a,0px 0px 32px #b0355a,0px 0px 64px #b0355a,0px 0px 128px #b0355a;
+    filter: brightness(1.5);
+    /* text-shadow: 0px 0px 2px #fff,0px 0px 16px #b0355a,0px 0px 30px #b0355a,0px 0px 70px #b0355a,0px 0px 150px #b0355a,0px 0px 310px #b0355a;
+    filter: brightness(3); */
+}
+
+.neonFont{
+    
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid red;
+    text-align: center;
+    background-color: black;
+    .grenn{
+        font-family: 'AndilanteriaSignature';
+        font-size: 80px;
+        color: #91bb8d;
+        margin-top: 20px;
+    &:hover{
+        animation: grennLight 2s infinite linear alternate ;
+    }
+    @keyframes grennLight {
+        from {
+            text-shadow: 0px 0px 1px #fff,0px 0px 8px #91bb8d,0px 0px 16px #91bb8d,0px 0px 32px #91bb8d,0px 0px 64px #91bb8d,0px 0px 128px #91bb8d;
+            filter: brightness(1.5);
+        }
+        to {
+            text-shadow: 0px 0px 2px #fff,0px 0px 16px #91bb8d,0px 0px 30px #91bb8d,0px 0px 70px #91bb8d,0px 0px 150px #91bb8d,0px 0px 310px #91bb8d;
+            filter: brightness(1.8);
+        }
+    }
+    }
+    
+    .pink{
+        font-family: 'AndilanteriaSignature';
+        font-size: 80px;
+        color: #b0355a;
+        margin-top: 20px;
+        &:hover{
+            animation: lights 2s infinite linear alternate ;
+        }
+        @keyframes lights {
+            from {
+                text-shadow: 0px 0px 1px #fff,0px 0px 8px #b0355a,0px 0px 16px #b0355a,0px 0px 32px #b0355a,0px 0px 64px #b0355a,0px 0px 128px #b0355a;
+                filter: brightness(1.5);
+            }
+            to {
+                text-shadow: 0px 0px 2px #fff,0px 0px 16px #b0355a,0px 0px 30px #b0355a,0px 0px 70px #b0355a,0px 0px 150px #b0355a,0px 0px 310px #b0355a;
+                filter: brightness(3);
+    
+            }
+        }
+    }
+}
